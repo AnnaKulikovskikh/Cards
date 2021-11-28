@@ -1,0 +1,47 @@
+.cards_types {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+  
+.btn {
+  width: 40px;
+  height: 30px;
+  margin-right: 2px;
+  border-radius: 5px;
+}
+  
+[data-id="number"] {
+  height: 30px;
+}
+  
+[data-action="validate"] {
+  background: green;
+  color: white;
+  height: 30px;
+}
+
+[data-id="visa"] {
+  background-image: url(1e5614925d3eb283f208.png);
+}
+  
+[data-id="mastercard"] {
+  background-image: url(cf279178a695a3d7d267.png);
+}
+
+[data-id="mir"] {
+  background-image: url(629314f1306921f9ceb9.png);
+}
+
+[data-id="american"] {
+  background-image: url(c6defc705ded1e22c926.png);
+}
+
+img .btn {
+  width: 40px;
+  height: 30px;
+}
+
+.active {
+  background-color:red;
+}

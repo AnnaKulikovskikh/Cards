@@ -1,10 +1,13 @@
 // TODO: write code here
 import defineSystem from './define';
-//import validLong from './long';
-//import validLuhn from './luhn';
+import validLuhn from './luhn';
+import removeError from './removeError';
 
 const validate_btn = document.querySelector(".validate_btn");
 
+validate_btn.addEventListener('click', validLuhn);
 validate_btn.addEventListener('click', defineSystem);
-//validate_btn.addEventListener('click', validLong);
-//validate_btn.addEventListener('click', validLuhn);
+
+document.querySelector(".number").addEventListener('focus', () => {
+    removeError();
+});

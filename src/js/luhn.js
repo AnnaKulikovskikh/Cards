@@ -1,8 +1,13 @@
+import Error from './error';
+import removeError from './removeError';
+
 export default function validLuhn () {
     const number = document.querySelector(".number");
     const value = number.value.replace(/\D/g, '');
-    if (value.length < 12) return alert("Номер невалиден");
-    // return false
+    if (value.length < 9) {
+        removeError();
+        return Error('Слишком короткий номер!');
+    } 
     let nCheck = 0;
     let bEven = false;
 
@@ -15,9 +20,9 @@ export default function validLuhn () {
         nCheck += nDigit;
         bEven = !bEven;
     }
-    //return (nCheck % 10) == 0;
-    if ((nCheck % 10) != 0) return alert("Номер невалиден");
-    return alert("Принято")
-    //return true
-    // выставить псевдо-класс :invalid на поле Input
+
+    if ((nCheck % 10) != 0) {
+        removeError();
+        return Error("Номер невалиден!");
+    }
 }

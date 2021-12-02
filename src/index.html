@@ -10,15 +10,15 @@
 <body>
   <div class = "all">
     <div class = "cards_types">
-      <button disabled data-id="visa" class="btn"></button>
-      <button disabled data-id="mastercard" class="btn"></button>
-      <button disabled data-id="mir" class="btn"></button>
-      <button disabled data-id="american" class="btn"></button>
+      <div data-id="visa" class="card"></div>
+      <div data-id="mastercard" class="card"></div>
+      <div data-id="mir" class="card"></div>
+      <div data-id="american" class="card"></div>
     </div>
     <div data-widget="filter-widget">
       <form>
-        <label><input data-id="number" class="number" maxlength="19" placeholder="Введите номер карты"></label>
-        <button class="validate_btn">Click to validate</button>
+        <label><input required type="text" data-id="number" class="number" maxlength="25" placeholder="Введите номер карты"></label>
+        <button data-id="submit" class="validate_btn">Click to validate</button>
     </form>
   </div>  
   </div>
